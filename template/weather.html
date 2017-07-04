@@ -1,0 +1,53 @@
+<div>
+	<!-- 天气模板 -->
+	<div class="weather">
+		<h1 ng-bind="result.realtime.city_name">南京</h1>
+		<div class="weather-title">
+				<span>农历</span><span ng-bind="result.realtime.moon"></span>&nbsp;
+				<span>周</span><span ng-bind="result.weather[0].week"></span>
+			<div>
+				<span ng-bind="result.realtime.date">2017-09-23</span>&nbsp;
+				<span ng-bind="result.realtime.time"></span>
+			</div>
+			<div>
+				<!-- <span>湿度:</span> <span ng-bind="result.realtime.weather.humidity"></span> -->
+			</div>
+		</div>
+		<div>
+			<div  style="display: inline-block; vertical-align: top; text-align: center; width: 5.2rem;">
+				<i id="weather" class="{{result.iconid}}" style="font-size: 1rem;"></i>
+				<div class="weather" style="text-align: center; margin-top: 0.1rem;">
+					<span ng-bind="result.realtime.weather.temperature"></span><i class="icon-Celsius" style="font-size: 0.3rem;"></i>
+					<span ng-bind="result.realtime.weather.info" style="display: block;"></span>
+				</div>
+				<div>
+					
+				</div>
+				<div class="wind">
+					<span ng-bind="result.realtime.wind.windspeed"></span>
+					<span ng-bind="result.realtime.wind.direct"></span>
+					<span ng-bind="result.realtime.wind.power"></span>
+				</div>				
+			</div>
+			<div class="weather-pm">
+				<h1>PM2.5</h1>
+				<span style="display: block;">空气质量:<span ng-bind="result.pm25.pm25.quality"></span></span>
+				<span style="display: block;"><span ng-bind="result.pm25.pm25.des"></span></span>	
+				<span style="display: block;">PM: <span ng-bind="result.pm25.pm25.curPm"></span></span>	
+				<span style="display: block;">PM2.5: <span ng-bind="result.pm25.pm25.pm25"></span></span>	
+				<span style="display: block;">PM10: <span ng-bind="result.pm25.pm25.pm10"></span></span>	
+			</div>		
+		</div>
+		<div class="weather-life">
+			<h1>生活指数</h1>
+			<span style="display:block;" ng-bind="result.realtime.weather.date"></span>
+			<div ng-repeat="(key, value) in result.life.info track by key">
+				<div ng-if="value">
+					<span ng-bind="key | formatlife"></span>&nbsp;<span>:</span>
+					<span ng-bind="value[0]" class="normal"></span>
+					<span ng-bind="value[1]" class="warning" style="display: block;"></span>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

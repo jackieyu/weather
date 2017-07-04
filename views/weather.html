@@ -1,0 +1,10 @@
+
+<div>
+	<input type="text" style="border: 1px solid #999;padding: 0.1rem 0.1rem; width: 4rem;" placeholder="请输入城市名字" ng-model="data.placename" />
+	<span style="display: inline-block; background-color: #aabbcc; padding: 0.08rem 0.08rem;" ng-click="searchWeather()">查询</span>
+	<div>
+		<span ng-if="data.errmsg" style="color: red;">*</span>
+		<span style="color: red;" ng-bind="data.errmsg"></span>
+	</div>
+</div>
+<weather-directive ng-if="weatherService.weatherResult" result="weatherService.weatherResult" weather-icon="data"></weather-directive>

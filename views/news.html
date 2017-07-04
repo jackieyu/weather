@@ -1,0 +1,9 @@
+<h1>新闻</h1>
+
+<news-directive result="newsService.newsResult"></news-directive>
+
+	<div align="center">
+		<div ng-click="loadMore()" ng-if="newsService.newsResult.length > 9 && newsService.hasMore" style="width: 50%;  line-height: 0.7rem; text-align: center;">
+			加载更多
+		</div>
+	</div>

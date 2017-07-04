@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>angular</title>
+	<link rel="stylesheet" href="./style/style-71b43b4e7b.min.css">
+	<link rel="stylesheet" type="text/css" href="./font/style.css">
+	<script src="http://cdn.bootcss.com/angular.js/1.6.4/angular.js"></script>
+
+	<script src="./lib/lib-8bbebd3f8b.min.js"></script>
+
+	<!-- <script src="./bower_components/jquery/dist/jquery.js"></script> -->
+
+	<script src="./js/app-ac77202f8f.min.js"></script>
+</head>
+
+<body ng-app="app">
+		<header class="header">
+			<ol>
+				<li><a href="/">天气</a></li>
+				<li><a href="#!/news">新闻</a></li>
+			</ol>
+		</header>
+		<div class="container">
+			<div ui-view></div>
+		</div>	
+
+    <script type="text/javascript">
+	(function (doc, win) {
+	        var docEl = doc.documentElement,
+	            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	            recalc = function () {
+	                var clientWidth = docEl.clientWidth;
+	                if (!clientWidth) return;
+	                if(clientWidth>=640){
+	                    docEl.style.fontSize = '100px';
+	                }else{
+	                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	                }
+	            };
+
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);    	
+    </script>
+
+</body>
+</html>

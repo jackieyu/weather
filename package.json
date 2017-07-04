@@ -1,0 +1,40 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "angular",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node ./server/server.js",
+    "client": "gulp",
+    "client:build": "gulp build"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "jakcie",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-route": "^1.6.4",
+    "bower": "^1.8.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-ng-constant": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.2.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webserver": "^0.9.1",
+    "ngmin": "^0.5.0",
+    "pump": "^1.0.2",
+    "query-string": "^4.3.4",
+    "yargs": "^8.0.2"
+  }
+}

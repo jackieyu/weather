@@ -1,0 +1,20 @@
+<div>
+	<!-- 旅游新闻 -->
+
+	<div class="news" style="border: 1px solid ;" ng-repeat="item in result track by $index">
+		<a ng-click="open(item.url)">
+			<div class="container">
+				<div class="thumbnail" style="display: inline-block;">
+					<img ng-src="{{item.picUrl}}" />
+				</div>
+				<div class="content" style="display: inline-block; vertical-align: top;">
+					<div class="title" ng-bind="item.title">
+						
+					</div>
+					<div class="desc" ng-bind="item.description">
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
